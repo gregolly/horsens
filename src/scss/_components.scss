@@ -1,0 +1,16 @@
+.header-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to bottom,
+    theme('colors.brand-cafe / 0.55'),
+    theme('colors.brand-marrom / 0')
+  );
+}
+
+#modal-search-field {
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}

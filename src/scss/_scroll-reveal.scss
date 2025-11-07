@@ -1,0 +1,19 @@
+// assets/scss/_scroll-reveal.scss
+
+/**
+ * Define o estado inicial para os elementos que serão "revelados".
+ * Usamos um atributo [data-scroll-reveal] para que seja fácil de aplicar no HTML.
+ */
+[data-scroll-reveal] {
+    opacity: 0;
+    transform: translateY(30px); // Começa 30px abaixo da sua posição final
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+/**
+ * Define o estado final (visível) que o JavaScript irá adicionar.
+ */
+[data-scroll-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,44 @@
+/*
+ * Estilos para o Contact Form 7 (layout empilhado)
+ */
+
+// Esconde as labels (como no design), mas mantém-nas para acessibilidade
+.wpcf7-form label {
+    @apply sr-only; // 'screen-reader-only' do Tailwind
+}
+
+// Estilo de cada bloco de campo
+.form-col {
+    @apply mb-6; // Adiciona espaço entre os campos empilhados
+}
+
+// Estilo dos campos de input (texto, email, etc)
+.wpcf7-form-control {
+    &.wpcf7-text,
+    &.wpcf7-email,
+    &.wpcf7-tel,
+    &.wpcf7-textarea {
+        @apply w-full p-4 border-none ring-0 focus:ring-2 focus:ring-brand-marrom;
+        @apply bg-brand-cafe text-white font-sans;
+        
+        // Estiliza o texto do placeholder
+        &::placeholder {
+            @apply text-gray-400 opacity-70;
+        }
+    }
+}
+
+// Estilo específico para a Text Area
+.wpcf7-textarea {
+    @apply h-48; // Define a altura da caixa de mensagem
+}
+
+// Estilo do botão de Envio
+.wpcf7-submit {
+    @apply py-3 px-12 text-white font-serif text-lg cursor-pointer;
+    @apply bg-brand-marrom transition-opacity hover:opacity-90;
+    
+    // Remove estilos padrão do botão
+    border: none;
+    appearance: none;
+}

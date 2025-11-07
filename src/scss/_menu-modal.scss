@@ -1,0 +1,47 @@
+// assets/scss/_menu-modal.scss
+
+.modal-nav-menu {
+    @apply list-none p-0 m-0 flex flex-col space-y-2; // Layout vertical
+
+    // Estilo para cada item <li>
+    .menu-item {
+        @apply w-full overflow-hidden;
+
+        a {
+            @apply block py-2 text-3xl font-normal;
+            font-family: theme('fontFamily.serif'), serif;
+            color: theme('colors.brand-cafe');
+
+            // 1. Defina a transição e o estado inicial para o 'shift'
+            transform: translateX(0);
+            transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+            &:hover {
+                // 2. Mova o elemento para a direita, em vez de adicionar padding
+                transform: translateX(12px); 
+                color: theme('colors.brand-marrom');
+            }
+        }
+    }
+
+    // Para os links com setas (Classe CSS "has-arrow" no admin do WP)
+    .has-arrow {
+        a {
+            // 3. Use flex e justify-between para alinhar a seta à direita
+            @apply flex items-center gap-4;
+
+            // 4. Adiciona a seta "→"
+            &::after {
+                content: ''; // 5. O conteúdo DEVE ser o caractere da seta
+                @apply w-6 h-6 ml-4; // Adiciona espaço
+                mask-image: url('../../dist/images/icons/arrow.svg');
+                
+                mask-size: contain;
+                mask-repeat: no-repeat;
+                mask-position: center;
+
+                background-color: currentColor;
+            }
+        }
+    }
+}
