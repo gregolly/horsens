@@ -56,16 +56,6 @@ Para correr este projeto localmente, você precisará de ter instalado:
 4.  **Ativar o Tema:**
     Vá ao painel de administração do WordPress (`Aparência > Temas`) e ative o tema "Horsens".
 
-5.  **Sincronizar Campos ACF:**
-
-    - Vá para `Campos Personalizados > Grupos de Campos` no admin.
-    - Você deve ver uma notificação a dizer que foram encontrados novos ficheiros JSON.
-    - Clique no botão "Sincronizar" para importar todos os grupos de campos definidos na pasta `acf-json/`.
-
-6.  **Preencher a Página de Opções:**
-    - A maioria do conteúdo da página inicial (como a secção de Equipa, Testemunhos, etc.) é gerida globalmente.
-    - Vá para **Aparência > Configurações da página inicial** e preencha os campos necessários.
-
 ## Desenvolvimento (Build Scripts)
 
 Todos os comandos devem ser corridos a partir da raiz da pasta do tema (`/wp-content/themes/horsens/`).
