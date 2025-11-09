@@ -17,7 +17,7 @@ if ($image) :
     $image_url = $image['url'];
 endif; 
 ?>
-<section id="hero" class="relative h-[32rem] md:h-screen" data-scroll-reveal>
+<section id="hero" class="relative h-[32rem] md:h-screen overflow-hidden" data-scroll-reveal>
     <div class="relative h-[32rem] md:h-screen bg-cover bg-center" 
             style="background-image: url('<?php echo esc_url($image_url); ?>')">
     </div>
