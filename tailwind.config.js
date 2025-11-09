@@ -17,8 +17,8 @@ module.exports = {
                 'brand-bg-section': '#D9D9D9'
             },
             fontFamily: {
-                serif: '"Playfair Display"',
-                sans: '"Karla"',
+                serif: ['Playfair Display', 'serif'],
+                sans: ['Karla', 'sans-serif'],
             }
         }
     },
