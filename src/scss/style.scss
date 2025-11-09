@@ -10,4 +10,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.button-submit-container {
+    .wpcf7-submit {
+        font-family: theme('fontFamily.sans');
+        width: 12.5rem;
+    }
+}
 
+#right-faq {
+    p {
+        font-family: theme('fontFamily.sans');
+        margin-bottom: 1rem;
+    }
+}
