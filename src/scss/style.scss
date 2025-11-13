@@ -23,3 +23,48 @@
         margin-bottom: 1rem;
     }
 }
+
+/* Isso vai sobrescrever facilmente o seletor do .prose */
+.meu-conteudo-wysiwyg h2,
+.meu-conteudo-wysiwyg h3,
+.meu-conteudo-wysiwyg h4,
+.meu-conteudo-wysiwyg h5,
+.meu-conteudo-wysiwyg h6 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 2.25rem;
+}
+
+.meu-conteudo-wysiwyg p {
+    font-family: theme('fontFamily.sans');
+}
+
+.meu-conteudo-wysiwyg ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.meu-conteudo-wysiwyg ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.meu-conteudo-wysiwyg ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    
+    width: 20px;
+    height: 20px;
+    background-image: url('../../dist/images/icons/check\ 1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Exemplo: mudando o marcador */
+.meu-conteudo-wysiwyg ul li::marker {
+    color: #b08a70; /* Sua cor marrom */
+}
