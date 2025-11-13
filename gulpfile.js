@@ -1,5 +1,7 @@
 // gulpfile.js
 const { watch, series, src, dest } = require('gulp');
+const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed').default;
 const sass = require('gulp-sass')(require('sass'));
 const tailwindcss = require('tailwindcss');
 const postcss = require('gulp-postcss');
@@ -9,6 +11,8 @@ const cleanCSS = require('gulp-clean-css');
 const webpack = require('webpack-stream');
 const rename = require('gulp-rename');
 const sharpOptimizeImages = require('gulp-sharp-optimize-images').default;
+
+const imgDest = './dist/images';
 
 function browsersyncServer(cb) {
     browsersync.init({
@@ -76,6 +80,7 @@ function jsTask() {
 
 function imageTask() {
     return src('./src/images/**/*')
+        .pipe(changed(imgDest))
         .pipe(sharpOptimizeImages({
             'jpg': {
             quality: 80,
@@ -90,8 +95,8 @@ function imageTask() {
                 quality: 80,
             }
         }))
-        .pipe(dest('./dist/images'))
-        .pipe(browsersync.stream())
+        .pipe(imagemin())
+        .pipe(dest(imgDest));
 }
 
 function watchTask() {
