@@ -4,8 +4,14 @@
  */
 ?>
 
-<div class="relative z-5 lg:pt-24 px-4 pt-4 md:pt-8 lg:ml-20" data-scroll-reveal>
-    
+<?php
+    if (is_front_page() ) : 
+        $classe = 'lg:pt-6 lg:ml-20';
+?>
+<div class="relative z-5 px-4 pt-4 md:pt-8 <?php echo esc_attr($classe); ?>" data-scroll-reveal>
+<?php
+    endif;
+?>
     <?php if ( is_front_page() ) : ?>
 
         <h1 class="lg:text-4xl text-3xl font-serif text-brand-azul-escuro lg:w-[500px]">
@@ -18,17 +24,22 @@
             <?php the_field('hero_label_button', 'option'); ?>
         </a>
 
-    <?php elseif (is_single('equipe')) : ?>
+    <?php elseif (is_singular('equipe')) : ?>
         <h1 class="text-4xl md:text-6xl font-serif text-white text-center">
             Detalhes da Instrutora
         </h1>
-
+    <?php elseif (is_post_type_archive('equipe')) : ?>
+        <h1 class="text-4xl md:text-6xl font-serif text-white text-center">
+            Nossas Instrutoras
+        </h1>
+    <?php elseif (is_post_type_archive('evento')) : ?>
+        <h1 class="text-4xl md:text-6xl font-serif text-white text-center">
+            Nossos Eventos
+        </h1>
     <?php else : ?>
-
         <h1 class="text-4xl md:text-6xl font-serif text-white text-center">
             <?php the_title(); ?>
         </h1>
-
     <?php endif; ?>
 
 </div>
