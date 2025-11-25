@@ -1,3 +1,4 @@
+@use '_breadcrumb.scss';
 @use 'components';
 @use 'contact-form';
 @use 'fonts';
@@ -30,16 +31,19 @@
 .meu-conteudo-wysiwyg h4,
 .meu-conteudo-wysiwyg h5,
 .meu-conteudo-wysiwyg h6 {
+    color: theme('colors.brand-azul-escuro');
     margin-bottom: 1rem;
     margin-top: 1rem;
     font-size: 2.25rem;
 }
 
 .meu-conteudo-wysiwyg p {
+    color: theme('colors.brand-azul-escuro');
     font-family: theme('fontFamily.sans');
 }
 
 .meu-conteudo-wysiwyg ul {
+    font-family: theme('fontFamily.sans');
     list-style: none;
     padding-left: 0;
 }
@@ -64,7 +68,22 @@
     background-position: center;
 }
 
-/* Exemplo: mudando o marcador */
 .meu-conteudo-wysiwyg ul li::marker {
-    color: #b08a70; /* Sua cor marrom */
+    color: theme('colors.brand-marrom');
+}
+
+.diagonal-overlay {
+  /* Isso desenha um polígono de 4 pontos:
+    1. Canto superior esquerdo (0 0)
+    2. Ponto no topo, a 80% da largura (80% 0)
+    3. Ponto na base, a 60% da largura (60% 100%)
+    4. Canto inferior esquerdo (0 100%)
+  */
+  clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+}
+
+#back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
