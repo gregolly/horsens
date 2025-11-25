@@ -4,6 +4,7 @@ import initSliderControls from "./components/sliderControl";
 import initFaqAccordion from "./components/faq-accordion";
 import initScrollReveal from "./components/scrollReveal";
 import initSmoothScroll from "./components/smooth-scroll";
+import initBackToTop from "./components/backToTop";
 
 document.addEventListener('DOMContentLoaded', function() {
     initMenuModal();
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initFaqAccordion();
     initScrollReveal();
     initSmoothScroll();
+    initBackToTop();
 });
