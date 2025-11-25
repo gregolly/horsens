@@ -2,16 +2,23 @@
 get_header();
 ?>
 
+<div id="primary">
+
 <?php
 if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post();
-		// get_template_part();
-	endwhile;
+    while ( have_posts() ) :
+        
+        the_post();
+        
+        the_content();
+        
+    endwhile;
 else:
-	echo "Nenhum conteudo encontrado!";
+    echo "Nenhum conteúdo encontrado!";
 endif;
 ?>
+
+</div>
 
 <?php
 get_footer();
