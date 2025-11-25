@@ -37,6 +37,20 @@ if (is_front_page()) {
     if ( $image_interna ) {
         $hero_image_url = $image_interna['url'];
     }
+} elseif (is_page_template('archive-evento.php')) {
+    $hero_height_class = 'h-[20rem] md:h-[28rem]';
+
+    $image_interna = get_field('imagem_de_fundo_evento');
+    if ( $image_interna ) {
+        $hero_image_url = $image_interna['url'];
+    }
+} else {
+    $hero_height_class = 'h-[20rem] md:h-[28rem]';
+
+    $image_interna = get_field('imagem_de_fundo_paginas_internas');
+    if ( $image_interna ) {
+        $hero_image_url = $image_interna['url'];
+    }
 }
 ?>
 
@@ -62,16 +76,24 @@ if (is_front_page()) {
                         <?php
                         if (has_custom_logo()) {
                             if ( !is_front_page()) {
-                               $logo_alt = get_field('logo_alt', 'option');
-                                echo "<img class='w-40' src='" . esc_url($logo_alt['url']). "' alt='" . esc_attr($logo_alt['alt']) . "' />"; 
+                                $logo_alt = get_field('logo_alt', 'option');
+                                
+                                echo "<a href='" . esc_url(home_url('/')) . "'>";
+                                echo "<img class='w-40' src='" . esc_url($logo_alt['url']). "' alt='" . esc_attr($logo_alt['alt']) . "' />";
+                                echo "</a>";
+
                             } elseif (!is_single()) {
-                                    $custom_logo_id = get_theme_mod('custom_logo');
-                                    $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-                                    if (has_custom_logo()) {
-                                        echo wp_get_attachment_image( $custom_logo_id, 'full', false, array(
-                                            'class' => 'custom-logo',
-                                            'alt'   => get_bloginfo('name')
-                                        ) );
+                                $custom_logo_id = get_theme_mod('custom_logo');
+                                $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+                                if (has_custom_logo()) {
+                                    
+                                    echo "<a href='" . esc_url(home_url('/')) . "'>";
+                                    echo wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+                                        'class' => 'custom-logo',
+                                        'alt'   => get_bloginfo('name')
+                                    ) );
+                                    echo "</a>";
+
                                 }
                             }
                         } else {

@@ -1,6 +1,5 @@
 <footer class="relative bg-brand-cafe text-brand-bege-claro font-sans py-16 px-8">
   <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
-
     <div class="lg:col-span-3">
       <h3 class="text-2xl font-serif text-brand-off-white mb-4"><?php the_field('nossa_historia_titulo', 'option'); ?></h3>
       <p class="text-sm leading-relaxed">
@@ -59,18 +58,18 @@
         </a>
       <?php endif; ?>
     </div>
-
   </div>
-
-  <a href="#top" class="absolute bottom-10 right-10 bg-brand-marrom w-12 h-12 flex items-center justify-center text-brand-off-white hover:bg-opacity-80 transition-all" aria-label="Voltar ao topo">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-7 7l7-7 7 7" />
-    </svg>
-  </a>
-    <?php wp_footer(); ?>
+  <?php wp_footer(); ?>
 </footer>
 </body>
 </html>
+
+<!-- Back to Top -->
+<a href="#top" id="back-to-top" class="fixed bottom-10 right-10 bg-brand-marrom w-12 h-12 flex items-center justify-center text-brand-off-white hover:bg-opacity-80 transition-all duration-300 ease-in-out opacity-0 invisible translate-y-2" aria-label="Voltar ao topo">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-7 7l7-7 7 7" />
+  </svg>
+</a>
 
 <!-- Search Modal -->
 <div id="search-modal" 
