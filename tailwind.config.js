@@ -4,7 +4,8 @@ module.exports = {
         './*.php',
         './template-parts/**/*.php',
         './src/js/dev/**/*.js',
-        './src/scss/**/*.scss'
+        './src/scss/**/*.scss',
+        '../../plugins/horsens-eventos/**/*.php',
     ],
     theme: {
         extend: {
