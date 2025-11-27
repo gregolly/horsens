@@ -23,7 +23,21 @@ if (! function_exists('_horsens_theme_setup')) :
 		// Register menus
 		register_nav_menus([
 			'primary' => 'Primary Menu',
-			'footer'  => 'Footer Menu'
+			'footer'  => 'Footer Menu',
+			'alternative' => 'Alternative Menu'
 		]);
+
+		// Register sidebar
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar do Blog', 'horsens' ),
+			'id'            => 'sidebar-blog',
+			'description'   => esc_html__( 'Adicione widgets aqui.', 'horsens' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s mb-12">', // Container do widget
+			'after_widget'  => '</div>',
+			// Título estilizado (Serifa, Azul Escuro, Linha Decorativa)
+			'before_title'  => '<h3 class="widget-title font-serif text-2xl text-brand-azul-escuro mb-6 flex items-center after:content-[\'\'] after:h-px after:flex-1 after:bg-brand-marrom/40 after:ml-4">',
+			'after_title'   => '</h3>',
+    	) );
+		
 	}
 endif;
