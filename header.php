@@ -23,11 +23,20 @@ if (is_front_page()) {
     if ( $image_home ) {
         $hero_image_url = $image_home['url'];
     }
-} elseif (is_singular('vantagens')) {
+} 
+elseif (is_singular('vantagens')) {
     $hero_height_class = 'h-[20rem] md:h-[28rem]';
 
     $image_interna = get_field('imagem_de_fundo_single_vantagens');
     if ($image_interna) {
+        $hero_image_url = $image_interna['url'];
+    }
+} 
+elseif (is_singular('evento')) {
+    $hero_height_class = 'h-[20rem] md:h-[28rem]';
+
+    $image_interna = get_field('imagem_de_fundo_single_evento');
+    if ( $image_interna ) {
         $hero_image_url = $image_interna['url'];
     }
 } elseif (is_singular('equipe')) {
@@ -37,17 +46,30 @@ if (is_front_page()) {
     if ( $image_interna ) {
         $hero_image_url = $image_interna['url'];
     }
-} elseif (is_page_template('archive-evento.php')) {
+} 
+elseif (is_page_template('archive-evento.php')) {
     $hero_height_class = 'h-[20rem] md:h-[28rem]';
 
-    $image_interna = get_field('imagem_de_fundo_evento');
+    $image_interna = get_field('imagem_de_fundo_archive_evento');
     if ( $image_interna ) {
         $hero_image_url = $image_interna['url'];
     }
-} else {
+    
+} 
+elseif (is_home()) {
     $hero_height_class = 'h-[20rem] md:h-[28rem]';
 
-    $image_interna = get_field('imagem_de_fundo_paginas_internas');
+    $blog_page_id = get_option('page_for_posts');
+
+    $image_interna = get_field('imagem_de_fundo_blog', $blog_page_id);
+    if ( $image_interna ) {
+        $hero_image_url = $image_interna['url'];
+    } 
+}
+else {
+    $hero_height_class = 'h-[20rem] md:h-[28rem]';
+
+    $image_interna = get_field('imagem_de_fundo_paginas_internas', 'option');
     if ( $image_interna ) {
         $hero_image_url = $image_interna['url'];
     }
