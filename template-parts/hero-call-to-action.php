@@ -36,6 +36,14 @@
         <h1 class="text-4xl md:text-6xl font-serif text-white text-center">
             Nossos Eventos
         </h1>
+    <?php elseif (is_home()) : ?>
+        <h1 class="text-4xl md:text-6xl font-serif text-white text-center">
+            Nosso Blog
+        </h1>
+    <?php elseif (is_category()) : ?>
+        <h1 class="text-4xl md:text-6xl font-serif text-white text-center">
+            <?php single_cat_title(); ?>
+        </h1>
     <?php else : ?>
         <h1 class="text-4xl md:text-6xl font-serif text-white text-center">
             <?php the_title(); ?>
