@@ -1,5 +1,5 @@
 <?php
-get_header();
+get_header('alt');
 ?>
 
 <div id="primary">
