@@ -46,5 +46,7 @@ $title = get_field('contato_titulo', 'option');
                     </div>
                 <?php endif; ?>
 
-            </div> </div> </div>
+            </div> 
+        </div> 
+    </div>
 </section>
