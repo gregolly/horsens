@@ -34,14 +34,6 @@ function initSearchModal() {
                 closeModal();
             }
         });
-        
-        // Opcional: Adicionar "clicar fora" para o modal de busca
-        modal.addEventListener('click', (e) => {
-            // Se o clique foi no overlay (modal) e NÃO em um filho...
-            if (e.target === modal) { 
-                closeModal();
-            }
-        });
     }
 }
 
