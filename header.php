@@ -39,7 +39,8 @@ elseif (is_singular('evento')) {
     if ( $image_interna ) {
         $hero_image_url = $image_interna['url'];
     }
-} elseif (is_singular('equipe')) {
+} 
+elseif (is_singular('equipe')) {
     $hero_height_class = 'h-[20rem] md:h-[28rem]';
 
     $image_interna = get_field('imagem_de_fundo_paginas_internas');
