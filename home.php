@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <!-- Container Principal -->
-<div id="blog-feed" class="w-full bg-brand-off-white min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+<div id="blog-feed" class="w-full bg-brand-off-white min-h-screen py-16 px-4 sm:px-6 lg:px-8" data-scroll-reveal>
     <main class="max-w-7xl mx-auto">
 
         <!-- Layout de Duas Colunas (Sidebar Esquerda + Conteúdo Direita) -->
