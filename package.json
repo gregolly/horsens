@@ -6,7 +6,7 @@
     "dev": "gulp watch",
     "build": "gulp build",
     "styles": "gulp styles",
-    "scripts": "gulp scripts"
+    "bundle": "bestzip horsens-theme.zip acf-json/ dist/ inc/ template-parts/ *.php style.css screenshot.png"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
+    "bestzip": "^2.2.1",
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "gulp-changed": "^5.0.4",
