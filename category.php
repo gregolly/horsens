@@ -116,7 +116,7 @@ get_header('alt');
                     <div class="text-center py-20 bg-white border border-brand-azul-escuro/5 p-10">
                         <p class="font-serif text-xl text-brand-azul-escuro mb-4">Nenhum post encontrado nesta categoria.</p>
                         <a href="<?php echo get_permalink( get_option('page_for_posts') ); ?>" class="text-brand-marrom font-sans font-bold uppercase tracking-widest text-xs hover:text-brand-azul-escuro transition-colors">
-                            Ver todas as notícias
+                            Ver todos os posts.
                         </a>
                     </div>
 
