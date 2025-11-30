@@ -4,7 +4,7 @@
  */
 ?>
 
-<aside id="secondary" class="widget-area w-full lg:w-1/4 flex flex-col gap-12">
+<aside id="secondary" class="widget-area w-full lg:w-1/4 flex flex-col gap-12 order-2 lg:order-1">
 
     <?php if ( is_active_sidebar( 'sidebar-blog' ) ) : ?>
         

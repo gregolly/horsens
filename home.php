@@ -1,4 +1,5 @@
 <?php
+// Pagina de posts
 get_header(); 
 ?>
 
@@ -13,7 +14,7 @@ get_header();
             <?php get_sidebar(); ?>
 
             <!-- COLUNA 2: Feed de Posts -->
-            <div class="w-full lg:w-3/4">
+            <div class="w-full lg:w-3/4 order-1 lg:order-2">
                 <!-- Breadcrumb Simples -->
                 <?php 
                 if ( function_exists( 'rank_math_the_breadcrumbs' ) ) {
