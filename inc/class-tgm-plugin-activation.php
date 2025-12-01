@@ -1,6 +1,6 @@
 <?php
 
-if (function_exists('_horsens_register_required_plugins')) :
+if (!function_exists('_horsens_register_required_plugins')) :
     function _horsens_register_required_plugins() {
         $plugins = array(
 
