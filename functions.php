@@ -14,11 +14,13 @@
 	require_once __DIR__ . '/inc/acf-json-load-point.php';
 	require_once __DIR__ . '/inc/register-options-page.php';
 	require_once __DIR__ . '/inc/helpers.php';
+	require_once __DIR__ . '/inc/class-tgm-plugin-activation.php';
 
 	// Hooks
 	add_action( 'wp_enqueue_scripts', '_horsens_enqueue_assets' );
 	add_action('after_setup_theme', '_horsens_theme_setup');
 	add_action('acf/init', '_horsens_register_options_page');
+	add_action( 'tgmpa_register', '_horsens_register_required_plugins' );
 	// Filters
 	add_filter('acf/settings/save_json', '_horsens_acf_json_save_point');
 	add_filter('acf/settings/load_json', '_horsens_acf_json_load_point');
