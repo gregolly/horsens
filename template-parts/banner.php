@@ -2,13 +2,13 @@
     /**
      * Template Part: Call to Action
      */
-    $image_banner = get_field('imagem_banner');
+    $image_banner = get_field('imagem_banner', 113);
     $image_banner_url = $image_banner ? $image_banner['url'] : '';
     
-    $titulo_banner = get_field('titulo_banner');
-    $link_whatsapp = get_field('link_whatsapp');
-    $icone = get_field('icone_whatsapp');
-    $texto_botao = get_field('texto_botao_whatsapp');
+    $titulo_banner = get_field('titulo_banner', 113);
+    $link_whatsapp = get_field('link_whatsapp', 113);
+    $icone = get_field('icone_whatsapp', 113);
+    $texto_botao = get_field('texto_botao_whatsapp', 113);
 
     if (is_single('equipe')) : 
 ?>
