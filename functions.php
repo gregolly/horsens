@@ -15,6 +15,7 @@ require_once __DIR__ . '/inc/acf-json-load-point.php';
 require_once __DIR__ . '/inc/register-options-page.php';
 require_once __DIR__ . '/inc/tgm-config.php';
 require_once __DIR__ . '/inc/class-tgm-plugin-activation.php';
+require_once __DIR__ . '/inc/acf-fields.php';
 
 require_once __DIR__ . '/inc/helpers.php';
 
