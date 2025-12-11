@@ -27,14 +27,7 @@ $eventos_query = new WP_Query( $args );
 <div id="evento" class="w-full bg-brand-off-white min-h-screen py-12 px-4 sm:px-6 lg:px-8" data-scroll-reveal>
 
     <main id="main" class="max-w-7xl mx-auto">
-        <?php 
-        // Breadcrumb com fallback
-        if ( function_exists( 'rank_math_the_breadcrumbs' ) ) {
-            rank_math_the_breadcrumbs();
-        } elseif ( function_exists( 'yoast_breadcrumb' ) ) {
-            yoast_breadcrumb( '<div class="breadcrumb">', '</div>' );
-        }
-        ?>
+        <?php get_template_part('template-parts/breadcrumbs'); ?>
 
         <?php if ( $eventos_query->have_posts() ) : ?>
 
