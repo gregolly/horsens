@@ -2,6 +2,11 @@
 // Template Part: About
 ?>
 <section id="about" class="py-24" data-scroll-reveal>
+    <div class="container mx-auto">
+        <?php if (! is_front_page()) : ?>
+            <?php get_template_part('template-parts/breadcrumbs'); ?>
+        <?php endif; ?>
+    </div>
     <div class="container mx-auto mt-10 flex flex-col lg:flex-row px-3">
         <div class="lg:flex flex-col lg:items-baseline items-center lg:w-1/2 relative text-brand-azul-escuro md:lg-block flex md:justify-start justify-center">
             <h2 class="text-4xl lg:mb-0 mb-2 md:text-end text-center">
