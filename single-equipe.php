@@ -11,14 +11,7 @@ if ( ! is_singular( 'equipe' ) ) {
 
 <main id="content" class="container mx-auto py-20" data-scroll-reveal>
 
-    <?php 
-    // Breadcrumb com fallback
-    if ( function_exists( 'rank_math_the_breadcrumbs' ) ) {
-        rank_math_the_breadcrumbs();
-    } elseif ( function_exists( 'yoast_breadcrumb' ) ) {
-        yoast_breadcrumb( '<div class="breadcrumb">', '</div>' );
-    }
-    ?>
+    <?php get_template_part('template-parts/breadcrumbs'); ?>
 
     <?php while ( have_posts() ) : the_post(); ?>
 

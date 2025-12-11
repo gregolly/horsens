@@ -72,10 +72,17 @@ get_header();
                         ?>
                     </div>
 
-                    <a href="<?php echo esc_url($link_inscricao); ?>" 
+                    <?php 
+                        $url_personalizada = get_field('link_personalizado_do_evento'); 
+
+                        if ($url_personalizada) :
+                    ?>
+
+                    <a target="_blank" href="<?php echo esc_url($url_personalizada); ?>" 
                        class="inline-block bg-brand-marrom text-white font-sans font-medium uppercase tracking-widest py-4 px-12 hover:bg-brand-azul-escuro transition-colors duration-300 shadow-sm text-center min-w-[200px]">
                        Inscreva-se
                     </a>
+                    <?php endif; ?>
                 </div>
 
                 <aside class="lg:col-span-5 lg:pt-4">
