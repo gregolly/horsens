@@ -61,6 +61,14 @@ function initMenuModal() {
                 closeModal();
             }
         });
+
+        const menuLinks = document.querySelectorAll('.menu-item a');
+
+        menuLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                closeModal();
+            })
+        });
     }
 }
 
